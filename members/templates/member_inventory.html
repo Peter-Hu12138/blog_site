@@ -1,0 +1,15 @@
+{% extends "master.html" %}
+
+{% block title %} detailed member inventory {% endblock %}
+
+{% block content %}
+
+{% for member in members %}
+<h1> {{member.firstname}} {{member.lastname}} </h1>
+<p> Phone: {{member.phone}} </p>
+<p> Age: {{member.age}} </p>
+<p> Join Date: {{member.joined_date}} </p>
+{% endfor %}
+
+{% endblock %}
+
