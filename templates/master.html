@@ -26,6 +26,15 @@
 
 <body>
 <main>
+    <h3>
+        {% if user.is_authenticated %}
+        Hi {{ user.username }}
+        {% else %}
+        You are logged off,
+            <a href="{% url 'login' %}"> click here to log in! </a>
+        {% endif %}
+
+    </h3>
     {% block content %}
     {% endblock %}
 </main>
