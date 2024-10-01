@@ -1,8 +1,30 @@
 <!-- templates/registration/login.html -->
-<h2>Log Innnnnnnnnn</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Log In</button>
-</form>
+
+<head>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+
+        p {
+            font-size: 120%;
+        }
+    </style>
+    <title>
+        Log in page
+    </title>
+</head>
+
+<body>
+    <h2>Log In</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Log In</button>
+    </form>
+</body>
 
