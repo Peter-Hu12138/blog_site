@@ -13,7 +13,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 
 # Redirect user to homepage after logging in
-LOGIN_REDIRECT_URL = "/"  # new
+LOGIN_REDIRECT_URL = "home"
+# Redirect user to homepage after logging out
+LOGOUT_REDIRECT_URL = "home"
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "members",
     "account",
+    'django_bootstrap5'
 ]
 
 MIDDLEWARE = [
