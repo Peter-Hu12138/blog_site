@@ -1,0 +1,15 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block content %}
+    <div style="text-align:center;">
+        <h1 text-align: center>{{ post.title }} </h1>
+        by <strong> {{ post.authorid.username }} </strong>
+    </div>
+    <p style="text-align:center;">
+        {{ post.content }}
+    </p>
+{% endblock %}

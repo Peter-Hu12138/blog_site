@@ -1,0 +1,12 @@
+<!-- templates/registration/login.html -->
+{% extends "master.html" %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+{% block content %}
+    <h1> Name: {{ user.username }}</h1>
+    <h1> Email: {{ user.email }}</h1>
+    <p><a href={% url "password_change" %}> Change password </a></p>
+{% endblock %}

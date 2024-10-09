@@ -16,7 +16,8 @@ from pathlib import Path
 LOGIN_REDIRECT_URL = "home"
 # Redirect user to homepage after logging out
 LOGOUT_REDIRECT_URL = "home"
-
+# Set to output to console
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -44,7 +45,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "members",
     "account",
-    'django_bootstrap5'
+    "django_bootstrap5",
+    "blog",
+    "comment",
 ]
 
 MIDDLEWARE = [

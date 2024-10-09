@@ -1,0 +1,17 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    Blog
+{% endblock %}
+
+{% block content %}
+    <h1><a href={% url "blog_writing" %}>Write blog</a></h1>
+    {% for post in posts %}
+        <h1>
+            <a href="/blog/{{ post.slug }}">
+                {{ post.title }}
+            </a>
+            by {{ post.authorid.username }}
+        </h1>
+    {% endfor %}
+{% endblock %}

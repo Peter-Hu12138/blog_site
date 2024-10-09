@@ -30,11 +30,12 @@ def main(request):
 
 
 def testing(request):
-    template = loader.get_template('testing.html')
-    context = {
-        'fruits': ['Apple', 'Banana', 'Cherry'],
-    }
-    return HttpResponse(template.render(context, request))
+  mydata = Member.objects.all.values()
+  template = loader.get_template('testing.html')
+  context = {
+    'mymembers': mydata,
+  }
+  return HttpResponse(template.render(context, request))
 
 
 def detailed_member_inventory(request: HttpRequest):

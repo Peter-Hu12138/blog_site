@@ -23,3 +23,9 @@ def sign_up(request: HttpRequest):
         form = user_form()
 
     return render(request, "registration/signup.html", {"form": form})
+
+def profile(request: HttpRequest):
+    """
+    Collect data and open the profile page
+    """
+    return render(request, "registration/profile.html", {})
