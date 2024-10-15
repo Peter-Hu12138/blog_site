@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-CA">
+
+<head>
+    <title> Jingtian Hu's Personal Website </title>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+
+        p {
+            font-size: 120%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">Welcome to Jingtian's Personal Website
+
+    </h1>
+
+    <p>
+        Hello, this is Jingtian Hu, a CS first year student at the University of Toronto.
+    </p>
+    <p>
+        I was borned and raised in Shenzhen, China for my entire life before I came to Toronto for higer education.
+        I like playing <a href="video_games.html">video games</a>, <a href="ultimate_frisbee.html"> ultimate
+            frisbee</a>, and solving <a href="math&cs.html"> math, cs, and biology problems</a>.
+    </p>
+    <p>
+        If you are a employer, please check my <a href="CV.html"> CV </a>.
+    </p>
+
+
+    <hr>
+    <img src="{% static 'mat137.png' %}" style="width:510px" alt="I and my bestie" class="center">
+    <p style="text-align:center;"> I with my bestie </p>
+    <img src="{% static 'i_with_sc_goat.jpg' %}" style="width:510px" alt="my dog: xiaobai - little white" class="center">
+    <p style="text-align:center;"> My cute dog: 小白, little whity in translation </p>
+    <img src="{% static 'frisbee_group_photo.jpg' %}" style="width:510px" alt="I with the 2023 world champion" class="center">
+    <p style="text-align:center;"> I with the best starcraft pro: Oliveira </p>
+
+</body>
+
+</html>

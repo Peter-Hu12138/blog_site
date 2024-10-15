@@ -6,6 +6,9 @@ from .forms import user_form
 
 # Create your views here.
 # TODO: catch the unique user name error with proper UI
+def intro(request: HttpRequest):
+    return render(request, "introduction.html")
+
 def sign_up(request: HttpRequest):
     """
     Register a user and redirect to homepageif a form is valid; otherwise, direct the user to fill the form.
@@ -22,10 +25,10 @@ def sign_up(request: HttpRequest):
     else:
         form = user_form()
 
-    return render(request, "registration/signup.html", {"form": form})
+    return render(request, "signup.html", {"form": form})
 
 def profile(request: HttpRequest):
     """
     Collect data and open the profile page
     """
-    return render(request, "registration/profile.html", {})
+    return render(request, "profile.html", {})
