@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
-from win32gui import FlashWindowEx
-
 # Redirect user to homepage after logging in
 LOGIN_REDIRECT_URL = "home"
 # Redirect user to homepage after logging out
@@ -31,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-lxodf-!(c+=5rq$dm&tew#hitvvio8_nqwy_ewpjhc0a8=e6q6"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
