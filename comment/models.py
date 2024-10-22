@@ -4,8 +4,6 @@ from blog.models import Post
 
 
 class Comment(models.Model):
-    title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
     authorid = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comment')
     blogid = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comment')
     # on_delete=models.CASCADE makes deletion of user in cascade with deletion of our post
@@ -15,7 +13,7 @@ class Comment(models.Model):
     content = models.TextField()
 
     class Meta:
-        ordering = ['-released_date']
+        ordering = ['-updated_on']
 
     def __str__(self):
-        return self.title
+        return self.id

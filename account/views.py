@@ -20,7 +20,7 @@ def sign_up(request: HttpRequest):
             user = User.objects.create_user(username=form.cleaned_data['user_name'],
                                             email=form.cleaned_data['email'],
                                             password=form.cleaned_data['password'])
-            return HttpResponseRedirect("login")
+            return HttpResponseRedirect("/account/login")
 
     else:
         form = user_form()
