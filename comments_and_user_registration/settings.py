@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     "django_bootstrap5",
     "blog",
     "comment",
+    "user",
+    "ckeditor",
 ]
 
 MIDDLEWARE = [
