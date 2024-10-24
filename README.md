@@ -1,5 +1,9 @@
 # blog_site
 
+# How to use
+1. python manage.py migrate
+2. python manage.py startserver
+
 ## Functions by now
 * ### sign up, login, logout
 * ### blog writing, blog viewing
